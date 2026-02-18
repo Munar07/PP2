@@ -1,7 +1,8 @@
 a=int(input())
-if a%4==0 and a%100!=0:
-    print("YES")
-elif a%400==0:
-    print("YES")
-else:
-    print("NO")
+x=2
+while x<=a//2:
+    if a%x==0:
+        print("No")
+        exit()
+    x+=1
+print("Yes")
