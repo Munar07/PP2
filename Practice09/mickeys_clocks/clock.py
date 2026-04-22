@@ -9,8 +9,8 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
 # Подберите эти координаты под вашу картинку clocks.png
-LEFT_SHOULDER = (240, 330)   # Левое плечо — секундная стрелка
-RIGHT_SHOULDER = (300, 400)  # Правое плечо — минутная стрелка
+LEFT_SHOULDER = (345, 250)   # Левое плечо — секундная стрелка
+RIGHT_SHOULDER = (250, 300)  # Правое плечо — минутная стрелка
 
 def load_images():
     clock_img = pygame.image.load(os.path.join(IMAGES_DIR, "clocks.png")).convert_alpha()
@@ -29,7 +29,7 @@ def draw_rotated_hand(screen, image, angle, pivot):
 
     # Точка вращения — НИЗ картинки (конец чёрной ручки)
     new_x = pivot[0] - w // 2
-    new_y = pivot[1] - h+5
+    new_y = pivot[0] - h+5
 
     screen.blit(rotated_image, (new_x, new_y))
 
